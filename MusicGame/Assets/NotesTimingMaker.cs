@@ -7,7 +7,7 @@ public class NotesTimingMaker : MonoBehaviour
 
     private AudioSource _audioSource;
 
-    public GameObject startButton;
+    public GameObject StartButton;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class NotesTimingMaker : MonoBehaviour
 
     public void StartMusic()
     {
-        startButton.SetActive(false);
+        StartButton.SetActive(false);
         _audioSource.Play();
     }
 }
