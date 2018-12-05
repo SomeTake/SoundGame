@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NotesTimingMaker : MonoBehaviour {
+public class NotesTimingMaker : MonoBehaviour
+{
 
     private AudioSource _audioSource;
 
