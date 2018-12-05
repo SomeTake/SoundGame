@@ -5,10 +5,9 @@ using System.IO;  // <- ここに注意
 
 public class CSVWriter : MonoBehaviour
 {
+    public string fileName; // 保存するファイル名
 
-    public string fileName = "Resources/CSV/TestTiming"; // 保存するファイル名
-
-    ////テスト用
+    //テスト用
     //void Start()
     //{
     //    WriteCSV("Hello,World");

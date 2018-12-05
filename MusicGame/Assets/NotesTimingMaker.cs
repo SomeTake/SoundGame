@@ -12,16 +12,12 @@ public class NotesTimingMaker : MonoBehaviour
     private bool _isPlaying = false;
     public GameObject startButton;
 
-    // 一度のみ発生
     void Start()
     {
-        // GameMusicオブジェクトを探す
         _audioSource = GameObject.Find("GameMusic").GetComponent<AudioSource>();
-        // CSVWriterオブジェクトを探す
         _CSVWriter = GameObject.Find("CSVWriter").GetComponent<CSVWriter>();
     }
 
-    // 毎フレーム発生
     void Update()
     {
         if (_isPlaying)
@@ -49,20 +45,15 @@ public class NotesTimingMaker : MonoBehaviour
         {
             WriteNotesTiming(1);
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+        if (Input.GetKeyDown(KeyCode.J))
         {
             WriteNotesTiming(2);
         }
 
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            WriteNotesTiming(3);
-        }
-
         if (Input.GetKeyDown(KeyCode.K))
         {
-            WriteNotesTiming(4);
+            WriteNotesTiming(3);
         }
     }
 
