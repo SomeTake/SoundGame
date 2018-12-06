@@ -24,6 +24,8 @@ public class NotesTimingMaker : MonoBehaviour
     // 毎フレーム発生
     void Update()
     {
+        Debug.Log(_isPlaying);                                                 // デバッグの表示
+        
         // 再生中の場合
         if (_isPlaying)
         {

@@ -16,10 +16,10 @@ public class CSVWriter : MonoBehaviour
     // CSVに書き込む処理
     public void WriteCSV(string txt)
     {
-        StreamWriter streamWriter;
+        StreamWriter streamWriter;  // StreamWriterクラス、ストリームを使って徐々に書き込む
         FileInfo fileInfo;
-        fileInfo = new FileInfo(Application.dataPath + "/" + fileName + ".csv");
-        streamWriter = fileInfo.AppendText();
+        fileInfo = new FileInfo(Application.dataPath + "/" + fileName + ".csv");    // 書き込み先の取得
+        streamWriter = fileInfo.AppendText();                                       // 
         streamWriter.WriteLine(txt);
         streamWriter.Flush();
         streamWriter.Close();
