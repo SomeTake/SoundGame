@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour
         }
 
         // 曲が終わったらシーン遷移させる
-        if (_audioSource.time == 0.0f && _isPlaying && GetMusicTime() != 0)
+        if (_audioSource.time == 0.0f && _isPlaying && GetMusicTime() > 1.0f)
         {
             SceneManager.LoadScene("ResultScene");
         }
