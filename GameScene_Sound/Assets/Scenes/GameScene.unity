@@ -432,6 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8ca96b065cc4e478743e414fb34f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineNum: 0
 --- !u!1001 &1249846531
 Prefab:
   m_ObjectHideFlags: 0
@@ -841,6 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8ca96b065cc4e478743e414fb34f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineNum: 0
 --- !u!1 &1621906265 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1097642099133684, guid: 45801eaaf2af8874bb33ae6e21cd9bb3,
@@ -862,6 +864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8ca96b065cc4e478743e414fb34f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineNum: 0
 --- !u!1 &1777589759 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1860634010059062, guid: f095aaf91d1011e4a96e6540df286b79,
@@ -883,6 +886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8ca96b065cc4e478743e414fb34f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineNum: 0
 --- !u!1 &1824308557
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +922,7 @@ MonoBehaviour:
   filePass: CSV/TestTiming
   timeOffset: -1
   startButton: {fileID: 1404124146}
+  scoreText: {fileID: 1519893653}
 --- !u!4 &1824308559
 Transform:
   m_ObjectHideFlags: 0
