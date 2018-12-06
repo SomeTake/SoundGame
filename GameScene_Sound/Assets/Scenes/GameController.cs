@@ -60,8 +60,10 @@ public class GameController : MonoBehaviour
     void SpawnNotes(int num)
     {
         Instantiate(notes[num],
-            new Vector3(-4.0f + (2.0f * num), 10.0f, 0),
+            new Vector3(-2.2f + (1.5f * num), 6.0f, 0),
             Quaternion.identity);
+        Debug.Log(notes[num]);
+        Debug.Log(GetMusicTime());
     }
 
     void LoadCSV()
