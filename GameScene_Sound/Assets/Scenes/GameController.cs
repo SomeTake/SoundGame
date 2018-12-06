@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
 
     public float timeOffset = -1;
 
-    private bool _isPlaying = false;
+    public bool _isPlaying = false;
     public GameObject startButton;
 
     public Text scoreText;
