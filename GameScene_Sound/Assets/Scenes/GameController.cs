@@ -65,7 +65,7 @@ public class GameController : MonoBehaviour
     void SpawnNotes(int num)
     {
         Instantiate(notes[num],
-            new Vector3(-2.2f + (1.5f * num), 6.0f, 0),
+            new Vector3(-2.115f + (1.410f * num), 7.0f, 0),
             Quaternion.identity);
         Debug.Log(notes[num]);
         Debug.Log(GetMusicTime());
