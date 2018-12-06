@@ -22,8 +22,6 @@ public class GameController : MonoBehaviour
     private bool _isPlaying = false;
     public GameObject startButton;
 
-    public Text scoreText;
-    private int _score = 0;
 
     void Start()
     {
@@ -38,7 +36,6 @@ public class GameController : MonoBehaviour
         if (_isPlaying)
         {
             CheckNextNotes();
-            scoreText.text = _score.ToString();
         }
 
     }
@@ -69,15 +66,18 @@ public class GameController : MonoBehaviour
 
     void LoadCSV()
     {
-        int i = 0, j;
+
         TextAsset csv = Resources.Load(filePass) as TextAsset;
+        Debug.Log(csv.text);
         StringReader reader = new StringReader(csv.text);
+
+        int i = 0;
         while (reader.Peek() > -1)
         {
 
             string line = reader.ReadLine();
             string[] values = line.Split(',');
-            for (j = 0; j < values.Length; j++)
+            for (int j = 0; j < values.Length; j++)
             {
                 _timing[i] = float.Parse(values[0]);
                 _lineNum[i] = int.Parse(values[1]);
@@ -89,14 +89,5 @@ public class GameController : MonoBehaviour
     float GetMusicTime()
     {
         return Time.time - _startTime;
-    }
-
-    public void GoodTimingFunc(int num)
-    {
-        Debug.Log("Line:" + num + " good!");
-        Debug.Log(GetMusicTime());
-        // 追加
-        EffectManager.Instance.PlayEffect(num);
-        _score++;
     }
 }
