@@ -3,6 +3,7 @@ using System.Collections;
 using System.IO;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;  // シーン遷移に使用
 
 public class GameController : MonoBehaviour
 {
@@ -41,6 +42,11 @@ public class GameController : MonoBehaviour
             scoreText.text = _score.ToString();
         }
 
+        // 曲が終わったらシーン遷移させる
+        if (_audioSource.time == 0.0f && _isPlaying && GetMusicTime() != 0)
+        {
+            SceneManager.LoadScene("ResultScene");
+        }
     }
 
     public void StartGame()
